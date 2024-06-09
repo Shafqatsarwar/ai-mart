@@ -11,6 +11,7 @@ class Product(SQLModel, table=True):
     category: str # It shall be pre defined by Platform
     sku: str | None = None
     rating: list["ProductRating"] = Relationship(back_populates="product")
+    
     # image: str # Multiple | URL Not Media | One to Manu Relationship
     # quantity: int | None = None # Shall it be managed by Inventory Microservice
     # color: str | None = None # One to Manu Relationship
